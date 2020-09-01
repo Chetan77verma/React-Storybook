@@ -19,5 +19,5 @@ export const Danger = () => <Button variantColor="red" {...actions('onClick', 'o
    Storyway way to see logs  (import add-on in preview.js i.e global level)
 **/
 
-export const Log = () => <Button variantColor="blue" onClick={() => { console.log('button clicked') }}>Log</Button>
+export const Log = () => <Button variantColor="blue" onClick={() => { console.log('button clicked',process.env.STORYBOOK_THEAM) }}>Log</Button>
 export const Knob = () => <Button variantColor="purple" disabled={boolean('Disabled', false)} >{text('Label', "Button Label")}</Button>
