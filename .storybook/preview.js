@@ -4,6 +4,7 @@ import { ThemeProvider, theme, CSSReset } from "@chakra-ui/core"
 // import Center from "../src/components/Center/Center"
 import { withConsole } from "@storybook/addon-console"
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
+import {  withA11y } from "@storybook/addon-a11y"
 addDecorator(story => <ThemeProvider theme={theme}>
   <CSSReset />
   {story()}
@@ -28,3 +29,9 @@ addParameters({
     viewports:INITIAL_VIEWPORTS
   }
 })
+
+/* 
+  added to fulfill accessibility standards in component/project
+**/
+
+addDecorator(withA11y)
